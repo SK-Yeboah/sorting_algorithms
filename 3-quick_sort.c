@@ -63,7 +63,6 @@ void quicksort(int *array, int low, int high, size_t size)
     {
         int pi;
         pi = lomuto_partition(array, low, high, size);
-
         quicksort(array, low, pi - 1, size);
         quicksort(array, pi + 1, high, size);
     }
