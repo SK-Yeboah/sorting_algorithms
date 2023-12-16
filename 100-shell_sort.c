@@ -24,10 +24,10 @@ void swap(int *a, int *b)
 void shell_sort(int *array, size_t size)
 {
 
-    int gap;
+    size_t gap;
     size_t j;
     int i;
-    size_t k;
+    
 
     if(array == NULL || size <= 1)
     {
@@ -52,13 +52,7 @@ void shell_sort(int *array, size_t size)
 
                     /* Print the array after each swap */
                     /*printf("[Swap]: ");*/ 
-                    for ( k = 0; k < size; ++k)
-                    {
-                        if (k > 0)
-                            printf(", ");
-                        printf("%d", array[k]);
-                    }
-                    printf("\n");
+                    print_array(array, size);
                 }
             }
         }
