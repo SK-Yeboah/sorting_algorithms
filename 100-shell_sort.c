@@ -8,9 +8,9 @@
  */
 void swap(int *a, int *b)
 {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
+	int temp = *a;
+	*a = *b;
+	*b = temp;
 }
 
 
@@ -23,38 +23,29 @@ void swap(int *a, int *b)
 
 void shell_sort(int *array, size_t size)
 {
+	size_t gap;
+	size_t j;
+	int i;
 
-    size_t gap;
-    size_t j;
-    int i;
-    
+	if (array == NULL || size <= 1)
+	{
+		return;
+	}
 
-    if(array == NULL || size <= 1)
-    {
-        return;
-    }
-
-   
-    
-    
-    for(gap = size/2; gap >=1; gap /= 2)
-    {
-        for(j = gap; j < size; j++)
-        {
-            for( i =j-gap; i >=0; i-= gap)
-            {
-                if(array[i + gap] > array[i])
-                {
-                    break;
-                }else
-                {
-                    swap(&array[i+gap], &array[i]);
-
-                   
-                    print_array(array, size);
-                }
-            }
-        }
-    }
+	for (gap = size / 2; gap >= 1; gap /= 2)
+	{
+		for (j = gap; j < size; j++)
+		{
+			for (i = j - gap; i >= 0; i -= gap)
+			{
+				if (array[i + gap] > array[i])
+				{
+					break;
+				}
+				swap(&array[i + gap], &array[i]);
+				print_array(array, size);
+			}
+		}
+	}
 }
 
