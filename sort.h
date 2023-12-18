@@ -29,6 +29,11 @@ void quicksort(int *array, int low, int high, size_t size);
 void quick_sort(int *array, size_t size);
 void shell_sort(int *array, size_t size);
 
+void merge_sort(int *array, size_t size);
+void merge(int *array, size_t size, int *left, size_t left_size, int *right, size_t right_size);
+void print_subarray(const int *array, size_t start, size_t end);
+
+
 
 
 
