@@ -33,6 +33,9 @@ void merge_sort(int *array, size_t size);
 void merge(int *array, size_t size, int *left, size_t left_size, int *right, size_t right_size);
 void print_subarray(const int *array, size_t start, size_t end);
 
+void heap_sort(int *array, size_t size);
+void heapify(int *array, size_t size, size_t index);
+
 
 
 
