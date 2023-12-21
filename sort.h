@@ -36,6 +36,10 @@ void print_subarray(const int *array, size_t start, size_t end);
 void heap_sort(int *array, size_t size);
 void heapify(int *array, size_t size, size_t index);
 
+void radix_sort(int *array, size_t size);
+void countingSort(int *array, size_t size, int exp);
+int getMax(int *array, size_t size);
+
 
 
 
