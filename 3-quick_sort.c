@@ -14,22 +14,34 @@ int lomuto_partition(int *array, int low, int high, size_t size)
     int pivot = array[high];
     int i = low - 1;
     size_t k;
+    int j;
 
-    for (size_t j = low; j <= high - 1; ++j)
+    for (j = low; j <= high - 1; ++j)
     {
-        if (array[j] < pivot)
+        if (array[j] <= pivot)
         {
             ++i;
             swap(&array[i], &array[j]);
+
+            /* Print the array after each swap */
+            /*printf("[Swap %d]: ", i + 1);*/
+            for ( k = 0; k < size; ++k)
+            {
+                if (k > 0)
+                    printf(", ");
+                printf("%d", array[k]);
+            }
+            printf("\n");
         }
     }
 
     swap(&array[i + 1], &array[high]);
 
-    /* Adjust the loop bounds to include all occurrences of the pivot */
-    for (k = i + 1; k <= high; ++k)
+    /* Print the array after the partitioning */
+    /*printf("[Partition done]: ");*/
+    for (k = 0; k < size; ++k)
     {
-        if (k > i + 1)
+        if (k > 0)
             printf(", ");
         printf("%d", array[k]);
     }
@@ -37,7 +49,6 @@ int lomuto_partition(int *array, int low, int high, size_t size)
 
     return i + 1;
 }
-
 
 /**
  * quicksort - Implements the Quick Sort algorithm using Lomuto partition
