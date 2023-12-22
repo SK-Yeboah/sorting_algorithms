@@ -79,23 +79,3 @@ void swap(int *a, int *b)
     *b = temp;
 }
 
-/**
- * print_array - Prints the elements of an array
- * @array: The array to be printed
- * @size: Number of elements in the array
- */
-/*void print_array(const int *array, size_t size)
-{
-    size_t i;
-
-    if (array == NULL)
-        return;
-
-    for (i = 0; i < size; ++i)
-    {
-        if (i > 0)
-            printf(", ");
-        printf("%d", array[i]);
-    }
-    printf("\n");
-}*/
